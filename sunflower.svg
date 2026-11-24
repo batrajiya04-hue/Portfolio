@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Radiating vibrant yellow petals -->
+  <g transform="translate(50, 50)">
+    <g id="petals">
+      <!-- 16 Petals in circle -->
+      <path d="M0 -15 C-6 -28 0 -48 0 -48 C0 -48 6 -28 0 -15 Z" fill="#FBBF24"/>
+      <path d="M0 -15 C-4 -28 0 -44 0 -44 C0 -44 4 -28 0 -15 Z" fill="#F59E0B"/>
+    </g>
+    <use href="#petals" transform="rotate(22.5)"/>
+    <use href="#petals" transform="rotate(45)"/>
+    <use href="#petals" transform="rotate(67.5)"/>
+    <use href="#petals" transform="rotate(90)"/>
+    <use href="#petals" transform="rotate(112.5)"/>
+    <use href="#petals" transform="rotate(135)"/>
+    <use href="#petals" transform="rotate(157.5)"/>
+    <use href="#petals" transform="rotate(180)"/>
+    <use href="#petals" transform="rotate(202.5)"/>
+    <use href="#petals" transform="rotate(225)"/>
+    <use href="#petals" transform="rotate(247.5)"/>
+    <use href="#petals" transform="rotate(270)"/>
+    <use href="#petals" transform="rotate(292.5)"/>
+    <use href="#petals" transform="rotate(315)"/>
+    <use href="#petals" transform="rotate(337.5)"/>
+
+    <!-- Dark textured sunflower center disk -->
+    <circle cx="0" cy="0" r="18" fill="#451A03"/>
+    <circle cx="0" cy="0" r="14" fill="#78350F"/>
+    <!-- Seed texture -->
+    <circle cx="-5" cy="-5" r="1.5" fill="#B45309"/>
+    <circle cx="5" cy="5" r="1.5" fill="#B45309"/>
+    <circle cx="-6" cy="4" r="1.5" fill="#B45309"/>
+    <circle cx="4" cy="-6" r="1.5" fill="#B45309"/>
+    <circle cx="0" cy="0" r="2" fill="#D97706"/>
+  </g>
+</svg>

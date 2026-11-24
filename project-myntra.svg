@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="myntraBg" x1="0" y1="0" x2="600" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#3F3F46"/>
+    </linearGradient>
+    <linearGradient id="mGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F43F5E"/>
+      <stop offset="100%" stop-color="#FB7185"/>
+    </linearGradient>
+    <linearGradient id="mGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="20" fill="url(#myntraBg)"/>
+  
+  <g transform="translate(50, 45)">
+    <text font-family="'Century Gothic', 'Montserrat', sans-serif" font-weight="900" font-size="34" fill="#FFFFFF">myntra</text>
+    <text y="24" font-family="system-ui, sans-serif" font-size="12" fill="#E4E4E7" letter-spacing="2">DESIGN THINKING & E-COMM</text>
+  </g>
+
+  <!-- Tag pill -->
+  <g transform="translate(420, 45)">
+    <rect width="130" height="38" rx="19" fill="#F43F5E" fill-opacity="0.25" stroke="#F43F5E" stroke-width="1"/>
+    <text x="65" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FB7185" text-anchor="middle">UI/UX & CAMPAIGN</text>
+  </g>
+
+  <!-- Fashion Artwork & Icon -->
+  <g transform="translate(300, 215)">
+    <!-- Iconic Myntra M shape stylization -->
+    <path d="M-80 50 C-80 -20 -40 -60 0 10 C40 -60 80 -20 80 50 C70 50 60 40 50 20 C40 0 20 -20 0 0 C-20 -20 -40 0 -50 20 C-60 40 -70 50 -80 50 Z" fill="url(#mGrad1)"/>
+    <path d="M-60 50 C-60 0 -30 -30 0 20 C30 -30 60 0 60 50 Z" fill="url(#mGrad2)" opacity="0.85"/>
+    
+    <!-- Neon framing -->
+    <rect x="-140" y="-100" width="280" height="200" rx="16" stroke="#F43F5E" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.4"/>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="360" width="600" height="90" fill="#000000" fill-opacity="0.45"/>
+  <text x="50" y="400" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">Myntra - Festive UX Overhaul</text>
+  <text x="50" y="424" font-family="system-ui, sans-serif" font-size="14" fill="#FDA4AF">E-Commerce Experience • Design Thinking</text>
+</svg>

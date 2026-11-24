@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" fill="none">
+  <defs>
+    <linearGradient id="cocoBg" x1="0" y1="0" x2="500" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ECFDF5"/>
+      <stop offset="100%" stop-color="#A7F3D0"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="620" rx="16" fill="url(#cocoBg)"/>
+  
+  <text x="250" y="55" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="16" fill="#047857" letter-spacing="1" text-anchor="middle">"THIS CAN WON'T SOLVE</text>
+  <text x="250" y="80" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="16" fill="#047857" letter-spacing="1" text-anchor="middle">YOUR PROBLEMS..."</text>
+  <text x="250" y="115" font-family="'Times New Roman', serif" font-style="italic" font-size="20" fill="#065F46" text-anchor="middle">...but it will hydrate your soul.</text>
+
+  <!-- Sleek Green Aluminum Can with Condensation -->
+  <g transform="translate(250, 320)">
+    <!-- Shadow -->
+    <ellipse cx="0" cy="150" rx="90" ry="25" fill="#064E3B" opacity="0.2"/>
+    <!-- Can cylinder -->
+    <rect x="-65" y="-120" width="130" height="260" rx="15" fill="#10B981"/>
+    <!-- Top rim -->
+    <ellipse cx="0" cy="-120" rx="65" ry="16" fill="#D1D5DB"/>
+    <ellipse cx="0" cy="-120" rx="55" ry="12" fill="#9CA3AF"/>
+    <ellipse cx="0" cy="-120" rx="20" ry="6" fill="#4B5563"/>
+    <!-- Can graphics -->
+    <path d="M-65 -40 Q0 0 65 -40 L65 50 Q0 90 -65 50 Z" fill="#047857"/>
+    <text x="0" y="15" font-family="'Arial Black', sans-serif" font-weight="900" font-size="26" fill="#FFFFFF" text-anchor="middle">COCO</text>
+    <text x="0" y="38" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#A7F3D0" letter-spacing="3" text-anchor="middle">PURE WATER</text>
+    <!-- Condensation water drops -->
+    <circle cx="-35" cy="-70" r="3" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="40" cy="-20" r="4" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="-25" cy="80" r="3.5" fill="#FFFFFF" opacity="0.8"/>
+    <circle cx="30" cy="100" r="3" fill="#FFFFFF" opacity="0.7"/>
+  </g>
+
+  <!-- Bottom CTA badge -->
+  <g transform="translate(250, 560)">
+    <rect x="-110" y="-20" width="220" height="40" rx="20" fill="#059669"/>
+    <text y="6" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#FFFFFF" text-anchor="middle">GRAB 100% ORGANIC</text>
+  </g>
+</svg>

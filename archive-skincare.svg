@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" fill="none">
+  <defs>
+    <linearGradient id="skinBg" x1="0" y1="0" x2="500" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="620" rx="16" fill="url(#skinBg)"/>
+  
+  <text x="250" y="60" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="14" fill="#FED7AA" letter-spacing="3" text-anchor="middle">NEW LAUNCH • CLINICAL GLOW</text>
+  <text x="250" y="105" font-family="'Times New Roman', serif" font-weight="900" font-size="34" fill="#FFFFFF" text-anchor="middle">Something bright</text>
+  <text x="250" y="145" font-family="'Times New Roman', serif" font-style="italic" font-size="32" fill="#FED7AA" text-anchor="middle">just launched.</text>
+
+  <!-- Amber glass serum dropper bottle with golden liquid -->
+  <g transform="translate(250, 340)">
+    <!-- Aura glow -->
+    <circle cx="0" cy="30" r="130" fill="#FDBA74" opacity="0.25"/>
+    
+    <!-- Shadow -->
+    <ellipse cx="0" cy="130" rx="75" ry="20" fill="#7C2D12" opacity="0.4"/>
+    
+    <!-- Dropper Pipette Top -->
+    <rect x="-16" y="-120" width="32" height="30" rx="5" fill="#FFFFFF"/>
+    <rect x="-24" y="-90" width="48" height="20" rx="4" fill="#E5E7EB"/>
+    
+    <!-- Bottle glass body -->
+    <rect x="-50" y="-70" width="100" height="190" rx="16" fill="#F97316" stroke="#FFFFFF" stroke-width="2"/>
+    <rect x="-42" y="-60" width="84" height="170" rx="12" fill="#EA580C"/>
+    
+    <!-- Minimalist white label -->
+    <rect x="-40" y="-20" width="80" height="90" rx="4" fill="#FFFFFF"/>
+    <text x="0" y="5" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="10" fill="#9A3412" letter-spacing="1" text-anchor="middle">MINIMALIST</text>
+    <text x="0" y="24" font-family="system-ui, sans-serif" font-weight="800" font-size="16" fill="#000000" text-anchor="middle">Vitamin C</text>
+    <text x="0" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#4B5563" text-anchor="middle">16% + Ferulic Acid</text>
+    <text x="0" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#059669" text-anchor="middle">Pure Radiance</text>
+  </g>
+
+  <!-- Bottom CTA badge -->
+  <g transform="translate(250, 560)">
+    <rect x="-100" y="-20" width="200" height="40" rx="20" fill="#FFFFFF"/>
+    <text y="6" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#C2410C" text-anchor="middle">SHOP NOW</text>
+  </g>
+</svg>

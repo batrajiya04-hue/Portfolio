@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="iqubeBg" x1="0" y1="0" x2="600" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="neonGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="20" fill="url(#iqubeBg)"/>
+  
+  <!-- Subtle futuristic grid lines -->
+  <path d="M0 120 H600 M0 220 H600 M0 320 H600" stroke="#38BDF8" stroke-opacity="0.12" stroke-width="1"/>
+  
+  <!-- Brand logo -->
+  <g transform="translate(50, 45)">
+    <text font-family="'Arial Black', sans-serif" font-weight="900" font-size="28" fill="#FFFFFF" letter-spacing="1">TVS <tspan fill="#38BDF8">iQube</tspan></text>
+    <text y="24" font-family="system-ui, sans-serif" font-size="12" fill="#94A3B8" letter-spacing="3">ELECTRIC MOBILITY REVOLUTION</text>
+  </g>
+
+  <!-- Tag pill -->
+  <g transform="translate(410, 45)">
+    <rect width="140" height="38" rx="19" fill="#38BDF8" fill-opacity="0.2" stroke="#38BDF8" stroke-width="1"/>
+    <text x="70" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#38BDF8" text-anchor="middle">MASTER PLANNING</text>
+  </g>
+
+  <!-- Electric Scooter Silhouette & Neon Rings -->
+  <g transform="translate(300, 220)">
+    <circle cx="0" cy="0" r="110" stroke="url(#neonGlow)" stroke-width="2" stroke-dasharray="6 6" opacity="0.6"/>
+    <circle cx="0" cy="0" r="140" stroke="#38BDF8" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Stylized Modern Scooter Body -->
+    <path d="M-90 40 Q-80 -20 0 -30 Q50 -35 80 -10 Q100 10 90 45 L-90 40 Z" fill="#E2E8F0"/>
+    <circle cx="-65" cy="45" r="32" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+    <circle cx="65" cy="45" r="32" fill="#1E293B" stroke="#38BDF8" stroke-width="4"/>
+    <path d="M-30 -25 L20 -85 L50 -85" stroke="#E2E8F0" stroke-width="10" stroke-linecap="round"/>
+    <!-- Headlight glow -->
+    <polygon points="50,-85 180,-120 180,-50" fill="url(#neonGlow)" opacity="0.35"/>
+    <circle cx="50" cy="-85" r="8" fill="#38BDF8"/>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="360" width="600" height="90" fill="#000000" fill-opacity="0.45"/>
+  <text x="50" y="400" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">TVS iQube - Digital Launch Strategy</text>
+  <text x="50" y="424" font-family="system-ui, sans-serif" font-size="14" fill="#94A3B8">EV Launch Campaign • Master Media Planning</text>
+</svg>

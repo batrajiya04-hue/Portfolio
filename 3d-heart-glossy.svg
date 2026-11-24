@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <!-- Rich Candy Red Radial Gradient -->
+    <radialGradient id="heartRed" cx="36%" cy="30%" r="72%">
+      <stop offset="0%" stop-color="#FF4D6D"/>
+      <stop offset="28%" stop-color="#E11D48"/>
+      <stop offset="65%" stop-color="#BE123C"/>
+      <stop offset="85%" stop-color="#881337"/>
+      <stop offset="100%" stop-color="#4C0519"/>
+    </radialGradient>
+
+    <!-- Ambient Bounce Glow on Bottom Edge -->
+    <linearGradient id="heartBounce" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#FDA4AF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#BE123C" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Dramatic 3D Drop Shadow -->
+    <filter id="heartShadow" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.75"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#E11D48" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#heartShadow)">
+    <!-- 3D Puffy Organic Heart Body -->
+    <path d="M80 138 C48 116 16 88 16 54 C16 32 34 16 58 16 C70 16 76 22 80 28 C84 22 90 16 102 16 C126 16 144 32 144 54 C144 88 112 116 80 138 Z" 
+          fill="url(#heartRed)"/>
+
+    <!-- Bottom Rim Bounce Lighting -->
+    <path d="M80 138 C48 116 16 88 16 54 C16 32 34 16 58 16 C70 16 76 22 80 28 C84 22 90 16 102 16 C126 16 144 32 144 54 C144 88 112 116 80 138 Z" 
+          fill="url(#heartBounce)"/>
+
+    <!-- Primary Curved Specular Sheen (Upper Left Lobe) -->
+    <ellipse cx="52" cy="38" rx="18" ry="9" transform="rotate(-35 52 38)" fill="#FFFFFF" opacity="0.85"/>
+    <ellipse cx="50" cy="36" rx="8" ry="4" transform="rotate(-35 50 36)" fill="#FFFFFF"/>
+
+    <!-- Secondary Soft Gleam (Right Lobe) -->
+    <ellipse cx="106" cy="40" rx="10" ry="5" transform="rotate(25 106 40)" fill="#FFFFFF" opacity="0.45"/>
+
+    <!-- Glossy Sparkle Dot -->
+    <circle cx="64" cy="30" r="3.5" fill="#FFFFFF" opacity="0.95"/>
+  </g>
+</svg>

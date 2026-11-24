@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" fill="none">
+  <defs>
+    <linearGradient id="zaikaBg" x1="0" y1="0" x2="500" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14532D"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="620" rx="16" fill="url(#zaikaBg)"/>
+  
+  <text x="250" y="55" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="14" fill="#86EFAC" letter-spacing="3" text-anchor="middle">PURE SPICES • AUTHENTIC AROMA</text>
+  <text x="250" y="100" font-family="'Times New Roman', serif" font-weight="900" font-size="40" fill="#FFFFFF" text-anchor="middle">Special Zaika</text>
+  <text x="250" y="135" font-family="'Times New Roman', serif" font-style="italic" font-size="32" fill="#FACC15" text-anchor="middle">Masala</text>
+
+  <!-- Spice Jar / Pouch Illustration with glowing spices -->
+  <g transform="translate(250, 330)">
+    <!-- Aura -->
+    <circle cx="0" cy="20" r="140" fill="#CA8A04" opacity="0.15"/>
+    
+    <!-- Pouch -->
+    <path d="M-60 -90 L60 -90 L75 110 C75 125 -75 125 -75 110 Z" fill="#F59E0B" stroke="#FDE047" stroke-width="3"/>
+    <rect x="-55" y="-105" width="110" height="20" rx="6" fill="#B45309"/>
+    
+    <!-- Pouch label -->
+    <rect x="-45" y="-30" width="90" height="90" rx="8" fill="#14532D"/>
+    <text x="0" y="10" font-family="'Times New Roman', serif" font-weight="bold" font-size="20" fill="#FEF08A" text-anchor="middle">ZAIKA</text>
+    <circle cx="0" cy="30" r="14" fill="#DC2626"/>
+    <!-- Whole spices around: Star anise, cinnamon, cloves -->
+    <ellipse cx="-110" cy="90" rx="16" ry="10" fill="#78350F" transform="rotate(-20 -110 90)"/>
+    <circle cx="110" cy="90" r="8" fill="#1C1917"/>
+    <circle cx="125" cy="100" r="6" fill="#1C1917"/>
+  </g>
+
+  <g transform="translate(250, 560)">
+    <rect x="-100" y="-20" width="200" height="40" rx="20" fill="#CA8A04"/>
+    <text y="6" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#000000" text-anchor="middle">EXPLORE BLEND</text>
+  </g>
+</svg>

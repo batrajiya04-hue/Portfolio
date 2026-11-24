@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANM JewelleryLine — Full-Funnel Digital Marketing Case Study | By Jiya Batra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0A0512;
+      --bg-card: rgba(26, 12, 38, 0.7);
+      --wine: #741027;
+      --wine-light: #961233;
+      --wine-deep: #440718;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --rose: #F472B6;
+      --rose-light: #FFA5BA;
+      --purple: #C084FC;
+      --text-white: #FFFFFF;
+      --text-muted: #B3A7C2;
+      --border-glow: rgba(192, 132, 252, 0.25);
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+      --font-display: 'Syne', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-white);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Ambient Glow */
+    .ambient-glow {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1000px;
+      height: 650px;
+      background: radial-gradient(ellipse at center, rgba(116, 16, 39, 0.25) 0%, rgba(192, 132, 252, 0.15) 40%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Presentation Header */
+    .pres-header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 36px;
+      border-bottom: 1px solid rgba(192, 132, 252, 0.15);
+      background: rgba(10, 5, 18, 0.85);
+      backdrop-filter: blur(16px);
+    }
+
+    .brand-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: linear-gradient(135deg, var(--wine) 0%, var(--wine-deep) 100%);
+      border: 1px solid rgba(244, 114, 182, 0.35);
+      border-radius: 999px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      color: #FFFFFF;
+      box-shadow: 0 4px 15px rgba(116, 16, 39, 0.4);
+    }
+
+    .brand-title-wrap h1 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .brand-title-wrap p {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      color: #FFFFFF;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(244, 114, 182, 0.18);
+      border-color: rgba(244, 114, 182, 0.4);
+    }
+
+    /* Main Presentation Frame */
+    .pres-viewport {
+      position: relative;
+      z-index: 5;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+    }
+
+    .slide-deck {
+      position: relative;
+      width: 100%;
+      max-width: 1100px;
+      min-height: 600px;
+      background: rgba(18, 9, 28, 0.85);
+      border: 1px solid rgba(192, 132, 252, 0.22);
+      border-radius: 28px;
+      box-shadow:
+        0 30px 80px -15px rgba(0, 0, 0, 0.85),
+        0 0 50px rgba(192, 132, 252, 0.12),
+        inset 0 1px 2px rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(24px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Slide Item */
+    .slide {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      padding: 42px 48px;
+      animation: slideFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .slide.active {
+      display: flex;
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.99);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Slide Header */
+    .slide-tag-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 14px;
+      background: rgba(116, 16, 39, 0.45);
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rose-light);
+    }
+
+    .slide-badge-gold {
+      background: rgba(212, 175, 55, 0.18);
+      border-color: rgba(212, 175, 55, 0.45);
+      color: var(--gold-light);
+    }
+
+    .slide-counter {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    .slide-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFA5BA 40%, #C084FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .slide-subtitle {
+      font-size: 1.05rem;
+      color: #E2D9EE;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    /* Grids & Blocks */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .grid-6 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card-block {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(192, 132, 252, 0.16);
+      border-radius: 16px;
+      padding: 22px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .card-block:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(244, 114, 182, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .card-block h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .card-block p, .card-block li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .card-block ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card-block li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card-block li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.75rem;
+    }
+
+    /* Metric Big Circles */
+    .metric-row {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin: 32px 0 28px 0;
+    }
+
+    .metric-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--wine) 0%, var(--wine-deep) 100%);
+      border: 2px solid rgba(244, 114, 182, 0.4);
+      box-shadow: 0 10px 30px rgba(116, 16, 39, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .metric-circle:hover {
+      transform: scale(1.06);
+    }
+
+    .metric-val {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1;
+    }
+
+    .metric-lbl {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--rose-light);
+      margin-top: 4px;
+    }
+
+    /* Tables */
+    .pres-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      font-size: 0.88rem;
+    }
+
+    .pres-table th {
+      background: rgba(116, 16, 39, 0.35);
+      color: var(--rose-light);
+      font-family: var(--font-display);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 12px 16px;
+      text-align: left;
+      border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+
+    .pres-table td {
+      padding: 12px 16px;
+      border: 1px solid rgba(192, 132, 252, 0.14);
+      color: #E2D9EE;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .pres-table tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .pres-table tr:hover td {
+      background: rgba(244, 114, 182, 0.06);
+    }
+
+    .table-badge-win {
+      color: #4ADE80;
+      font-weight: 700;
+    }
+
+    .table-badge-gap {
+      color: #F87171;
+    }
+
+    /* Footer Controls */
+    .pres-footer {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 36px;
+      background: rgba(10, 5, 18, 0.85);
+      border-top: 1px solid rgba(192, 132, 252, 0.15);
+      backdrop-filter: blur(16px);
+    }
+
+    .progress-track {
+      flex: 1;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      margin: 0 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--rose) 0%, var(--gold) 100%);
+      border-radius: 999px;
+      width: 7.14%; /* 1 of 14 */
+      transition: width 0.3s ease;
+    }
+
+    .nav-btn-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-nav {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--wine) 0%, var(--wine-deep) 100%);
+      border: 1px solid rgba(244, 114, 182, 0.4);
+      border-radius: 50%;
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(116, 16, 39, 0.4);
+      transition: all 0.25s ease;
+    }
+
+    .btn-nav:hover:not(:disabled) {
+      transform: scale(1.08);
+      background: linear-gradient(135deg, var(--wine-light) 0%, var(--wine) 100%);
+      box-shadow: 0 6px 20px rgba(116, 16, 39, 0.6);
+    }
+
+    .btn-nav:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    /* Print / Responsive */
+    @media (max-width: 992px) {
+      .grid-2, .grid-3, .grid-4, .grid-6 {
+        grid-template-columns: 1fr;
+      }
+      .slide {
+        padding: 24px 20px;
+      }
+      .metric-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+      .metric-circle {
+        width: 110px;
+        height: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Top Bar -->
+  <header class="pres-header">
+    <div class="brand-meta">
+      <div class="brand-logo-pill">✦ ANM JEWELLERYLINE</div>
+      <div class="brand-title-wrap">
+        <h1>Omni-Channel Digital Marketing Case Study</h1>
+        <p>Boutique Fine Jewellery House, Greater Kailash Part-II, New Delhi | By Jiya Batra</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="ANM_JEWELLERYLINE_CASE_STUDY.md" target="_blank" class="btn-action">📄 Full MD Report</a>
+      <a href="index.html" class="btn-action">← Return to Portfolio</a>
+    </div>
+  </header>
+
+  <!-- Presentation Viewport -->
+  <main class="pres-viewport">
+    <div class="slide-deck" id="slideDeck">
+
+      <!-- ================= SLIDE 1: BRAND GENESIS ================= -->
+      <section class="slide active" data-slide="1">
+        <div class="slide-tag-row">
+          <span class="slide-badge">01 • THE BRAND GENESIS</span>
+          <span class="slide-counter">Slide 1 of 14</span>
+        </div>
+        <h2 class="slide-title">MEET ANM JEWELLERYLINE</h2>
+        <p class="slide-subtitle">A heritage boutique fine jewellery house from Greater Kailash-II, New Delhi. The mission: Transform an esteemed brick-and-mortar legacy into an omni-channel, globally coveted luxury jewellery label.</p>
+        
+        <div class="grid-3" style="flex:1;">
+          <div class="card-block">
+            <h3>✦ 35+ Year Heritage</h3>
+            <p>Established in the late 1980s in South Delhi's luxury shopping corridor (JMD Kohinoor Mall, Savitri Cinema Road, GK-II). Renowned for trusted family generational patronage.</p>
+          </div>
+          <div class="card-block">
+            <h3>✦ Hallmark & Certified</h3>
+            <p>100% BIS Hallmarked 22K (916) and 18K (750) gold collections, IGI/GIA certified diamond solitaires, bridal Kundan/Polki, and pure silver craftsmanship.</p>
+          </div>
+          <div class="card-block">
+            <h3>✦ Direct Artisan Edge</h3>
+            <p>In-house master karigar workshops deliver bespoke bridal trousseau in 7-14 days with 15-25% lower making charges than corporate retail chains.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 2: THE CHALLENGE ================= -->
+      <section class="slide" data-slide="2">
+        <div class="slide-tag-row">
+          <span class="slide-badge">02 • THE STARTING POINT</span>
+          <span class="slide-counter">Slide 2 of 14</span>
+        </div>
+        <h2 class="slide-title">THE DIGITAL CHALLENGE</h2>
+        <p class="slide-subtitle">Goal: Make ANM JewelleryLine a high-prestige brand modern brides, self-purchasing women, and global NRI buyers discover, trust, and purchase from through a structured 6-phase roadmap.</p>
+        
+        <div class="metric-row">
+          <div class="metric-circle">
+            <span class="metric-val">0</span>
+            <span class="metric-lbl">FOLLOWERS</span>
+          </div>
+          <div class="metric-circle">
+            <span class="metric-val">0</span>
+            <span class="metric-lbl">WEB TRAFFIC</span>
+          </div>
+          <div class="metric-circle">
+            <span class="metric-val">0</span>
+            <span class="metric-lbl">DIGITAL LEADS</span>
+          </div>
+        </div>
+
+        <div class="card-block" style="text-align: center; margin-top: 10px;">
+          <p style="font-size: 0.95rem; color: #FFFFFF;"><strong>The Core Bottleneck:</strong> 100% dependency on physical walk-in footfall in GK-II, completely disconnected from the 70%+ jewellery buyers who begin their research on Instagram, Google, and Pinterest.</p>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 3: WHAT WE DELIVER ================= -->
+      <section class="slide" data-slide="3">
+        <div class="slide-tag-row">
+          <span class="slide-badge">03 • OUR SERVICES</span>
+          <span class="slide-counter">Slide 3 of 14</span>
+        </div>
+        <h2 class="slide-title">WHAT WE DELIVER</h2>
+        <p class="slide-subtitle">A high-velocity, full-funnel digital ecosystem designed to scale brand desire, local store appointments, and global D2C e-commerce revenue.</p>
+        
+        <div class="grid-6" style="flex:1;">
+          <div class="card-block">
+            <h3>BRANDING & WEB</h3>
+            <p>Luxury royal burgundy & champagne gold identity; high-speed mobile-first catalogue with live gold rates & WhatsApp VIP styling.</p>
+          </div>
+          <div class="card-block">
+            <h3>SOCIAL MEDIA</h3>
+            <p>Instagram bridal curation, Pinterest trousseau moodboards, YouTube diamond cut masterclasses & micro-influencer gifting.</p>
+          </div>
+          <div class="card-block">
+            <h3>SEO & CONTENT</h3>
+            <p>Buyer-intent keywords ("gold jewellers in GK-2"), South Delhi local 3-pack map dominance, and hallmark educational blogs.</p>
+          </div>
+          <div class="card-block">
+            <h3>GOOGLE ADS</h3>
+            <p>High-urgency Search campaigns, Google Merchant Center Shopping feeds, and local showroom visit Performance Max (PMax).</p>
+          </div>
+          <div class="card-block">
+            <h3>META ADS</h3>
+            <p>Cinematic Reels campaigns, wedding season lead-gen, VIP consultation booking, and dynamic cart-recovery ads.</p>
+          </div>
+          <div class="card-block">
+            <h3>VIDEO & CREATIVE</h3>
+            <p>Macro 4K diamond shimmer Reels, artisan workshop craftsmanship ASMR, real bride unboxings, and high-fashion lookbooks.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 4: PHASE 0 RESEARCH & AUDIT ================= -->
+      <section class="slide" data-slide="4">
+        <div class="slide-tag-row">
+          <span class="slide-badge">04 • PHASE 0 (WEEK 1–2)</span>
+          <span class="slide-counter">Slide 4 of 14</span>
+        </div>
+        <h2 class="slide-title">RESEARCH AND AUDIT</h2>
+        <p class="slide-subtitle">Laying the analytical groundwork: Uncovering market positioning, core buyer personas, competitor gaps, and baseline diagnostic data.</p>
+        
+        <div class="grid-4" style="flex:1;">
+          <div class="card-block">
+            <h3>BRAND DISCOVERY</h3>
+            <p>Product USP: BIS Hallmark 916/750 purity, IGI/GIA natural diamonds, honest making charges, and rapid 7-14 day bespoke custom manufacturing.</p>
+          </div>
+          <div class="card-block">
+            <h3>AUDIENCE PERSONAS</h3>
+            <p>• Gen Z / Millennial Brides<br>• Corporate Self-Purchasers<br>• US/UK/UAE NRI Diaspora<br>• Festive & Gifting Shoppers</p>
+          </div>
+          <div class="card-block">
+            <h3>COMPETITOR SCAN</h3>
+            <p>Benchmarked against 5 South Delhi legacy showrooms (Hazoorilal, Khanna) and 5 D2C digital leaders (CaratLane, BlueStone, GIVA).</p>
+          </div>
+          <div class="card-block">
+            <h3>AUDIT BASELINE</h3>
+            <p>Zero indexed product pages, unclaimed Google Map signals, untracked Meta pixel, and no structured review collection protocol.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 5: COMPETITOR LANDSCAPE ================= -->
+      <section class="slide" data-slide="5">
+        <div class="slide-tag-row">
+          <span class="slide-badge">05 • COMPETITOR AUDIT</span>
+          <span class="slide-counter">Slide 5 of 14</span>
+        </div>
+        <h2 class="slide-title">COMPETITOR LANDSCAPE & GAP ANALYSIS</h2>
+        <p class="slide-subtitle">Identifying the uncrowded sweet spot: Where corporate chains and traditional showrooms fall short, ANM JewelleryLine wins.</p>
+        
+        <table class="pres-table">
+          <thead>
+            <tr>
+              <th>Brand / Competitor</th>
+              <th>Demonstrated Strength</th>
+              <th>Critical Gap ANM JewelleryLine Owns</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>CaratLane / BlueStone</strong></td>
+              <td>Massive digital reach, app ecosystem, fast shipping.</td>
+              <td><span class="table-badge-gap">Mass-produced 14K focus; lacks heavy bridal polki & custom craftsmanship.</span></td>
+            </tr>
+            <tr>
+              <td><strong>Hazoorilal / Khanna Jewellers</strong></td>
+              <td>Elite South Delhi prestige, massive physical showrooms.</td>
+              <td><span class="table-badge-gap">Intimidating shopping vibe, exorbitant making charges, opaque online pricing.</span></td>
+            </tr>
+            <tr>
+              <td><strong>GIVA Jewellery</strong></td>
+              <td>Dominates budget 925 silver fashion gifting.</td>
+              <td><span class="table-badge-gap">Silver plated, synthetic stones; not an authentic fine gold/diamond house.</span></td>
+            </tr>
+            <tr>
+              <td><strong>Tanishq / Mia</strong></td>
+              <td>Universal household trust, nationwide footprint.</td>
+              <td><span class="table-badge-gap">Rigid catalog templates, high corporate markups, slow custom order turnaround.</span></td>
+            </tr>
+            <tr>
+              <td><strong>Local GK-II Showrooms</strong></td>
+              <td>Generational offline walk-in loyalty.</td>
+              <td><span class="table-badge-win">Zero digital storytelling, absent from Instagram, no overseas NRI shipping.</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ================= SLIDE 6: PHASE 1 FOUNDATION ================= -->
+      <section class="slide" data-slide="6">
+        <div class="slide-tag-row">
+          <span class="slide-badge">06 • PHASE 1 (MONTH 1)</span>
+          <span class="slide-counter">Slide 6 of 14</span>
+        </div>
+        <h2 class="slide-title">BUILDING THE FOUNDATION</h2>
+        <p class="slide-subtitle">Assembling the high-performance digital flagship to convert discovery into verified sales and showroom appointments.</p>
+        
+        <div class="grid-2" style="flex:1;">
+          <div class="card-block">
+            <h3>✦ Digital Flagship & Branding</h3>
+            <ul>
+              <li><strong>Brand Identity:</strong> Royal burgundy & champagne gold visual tokens, Instrument Serif typography.</li>
+              <li><strong>E-Commerce Store:</strong> Mobile-first headless Shopify Plus catalog with live gold rate ticker and 360° diamond viewer.</li>
+              <li><strong>VIP Concierge:</strong> 1-Click WhatsApp appointment & live video-call try-on booking.</li>
+            </ul>
+          </div>
+          <div class="card-block">
+            <h3>✦ Technical Footprint & Tracking</h3>
+            <ul>
+              <li><strong>Google Business Profile:</strong> Verified GK-II showroom with 50+ 4K geo-tagged photos and hours.</li>
+              <li><strong>Social Ecosystem:</strong> Unified Instagram, Pinterest, YouTube, and LinkedIn profiles.</li>
+              <li><strong>Analytics Infrastructure:</strong> GA4 e-commerce tracking, Meta Server-Side Conversions API, Google Tag Manager.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 7: PHASE 2 CONTENT & SOCIAL ================= -->
+      <section class="slide" data-slide="7">
+        <div class="slide-tag-row">
+          <span class="slide-badge">07 • PHASE 2 (MONTHS 1–3, ONGOING)</span>
+          <span class="slide-counter">Slide 7 of 14</span>
+        </div>
+        <h2 class="slide-title">CONTENT AND SOCIAL MEDIA</h2>
+        <p class="slide-subtitle">Capturing social attention through aspirational craftsmanship, transparent buyer education, and emotional bridal storytelling.</p>
+        
+        <div class="grid-2" style="flex:1;">
+          <div class="card-block">
+            <h3>CONTENT PILLARS</h3>
+            <ul>
+              <li><strong>Product Aesthetics & Styling:</strong> 4K macro shimmer Reels of certified diamond solitaires; bridal trousseau pairings.</li>
+              <li><strong>Behind the Bench:</strong> Pouring 22K gold, hand-prong diamond setting, laser hallmarking tests.</li>
+              <li><strong>Jewellery Transparency:</strong> "How to verify your BIS HUID code"; "18K vs 22K gold explained".</li>
+              <li><strong>Real Brides:</strong> Unboxing emotional moments in the GK-II boutique lounge.</li>
+            </ul>
+          </div>
+          <div class="card-block">
+            <h3>DISTRIBUTION & CADENCE</h3>
+            <ul>
+              <li><strong>Instagram:</strong> 4–5 Reels weekly + daily interactive Stories (polls, "Guess the Carat", Q&As).</li>
+              <li><strong>Pinterest:</strong> 15–20 high-res bridal pins weekly targeting NRI wedding boards.</li>
+              <li><strong>YouTube:</strong> 3–4 Shorts/week + monthly long-form bridal buying masterclasses.</li>
+              <li><strong>Influencer Strategy:</strong> Gifting collaborations with top Delhi bridal stylists & fashion editors.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 8: PHASE 3 SEO STRATEGY ================= -->
+      <section class="slide" data-slide="8">
+        <div class="slide-tag-row">
+          <span class="slide-badge">08 • PHASE 3 (MONTHS 2–6)</span>
+          <span class="slide-counter">Slide 8 of 14</span>
+        </div>
+        <h2 class="slide-title">SEO STRATEGY & LOCAL DOMINANCE</h2>
+        <p class="slide-subtitle">Dominating high-intent search queries and capturing South Delhi local footfall alongside national e-commerce discovery.</p>
+        
+        <div class="grid-6" style="flex:1;">
+          <div class="card-block">
+            <h3>KEYWORDS</h3>
+            <p>Targeting buyer-intent queries: "diamond jewellers in greater kailash 2", "hallmarked gold necklace delhi", "custom bridal jewellery".</p>
+          </div>
+          <div class="card-block">
+            <h3>ON-PAGE SEO</h3>
+            <p>Unique product copy, 4K alt tags, internal linking silos connecting chokers to matching earrings, and transparent pricing.</p>
+          </div>
+          <div class="card-block">
+            <h3>EDITORIAL BLOGS</h3>
+            <p>2–4 in-depth monthly guides: "The 2026 Delhi Bridal Jewellery Guide" and "Solitaire Diamond 4Cs Masterclass".</p>
+          </div>
+          <div class="card-block">
+            <h3>LOCAL MAP PACK</h3>
+            <p>Dominating Google Maps Top 3 local pack across GK-II, Nehru Place, CR Park with automated 5-star review collection.</p>
+          </div>
+          <div class="card-block">
+            <h3>AUTHORITY BACKLINKS</h3>
+            <p>PR features on WedMeGood, WeddingSutra, Femina, and bridal fashion digital publications.</p>
+          </div>
+          <div class="card-block">
+            <h3>TECHNICAL EXCELLENCE</h3>
+            <p>Sub-2s Core Web Vitals, JSON-LD JewelryStore & Product schema markup, WebP compression, and mobile responsiveness.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 9: PHASE 4A GOOGLE ADS ================= -->
+      <section class="slide" data-slide="9">
+        <div class="slide-tag-row">
+          <span class="slide-badge slide-badge-gold">PHASE 4A • TEST ₹1,000–1,500/DAY</span>
+          <span class="slide-counter">Slide 9 of 14</span>
+        </div>
+        <h2 class="slide-title">GOOGLE ADS REVENUE ENGINE</h2>
+        <p class="slide-subtitle">Capturing active, high-intent buyers searching for certified diamonds, engagement rings, and gold bridal sets.</p>
+        
+        <div class="grid-4" style="flex:1;">
+          <div class="card-block">
+            <h3>SEARCH ADS</h3>
+            <p>Targeting high-intent terms ("buy certified diamond ring delhi", "bespoke wedding jewellery"). Strict negative keywords to cut waste.</p>
+          </div>
+          <div class="card-block">
+            <h3>SHOPPING ADS</h3>
+            <p>Google Merchant Center product feed with clean titles, BIS hallmark tags, transparent pricing, and 4.9-star ratings.</p>
+          </div>
+          <div class="card-block">
+            <h3>PERFORMANCE MAX</h3>
+            <p>Full-funnel PMax campaigns across YouTube, Maps, Search, and Discover with 4K macro video assets.</p>
+          </div>
+          <div class="card-block">
+            <h3>SMART REMARKETING</h3>
+            <p>Dynamic Display & YouTube ads retargeting visitors who viewed bridal sets with VIP private lounge consultation invites.</p>
+          </div>
+        </div>
+
+        <div class="card-block" style="margin-top: 15px; text-align: center;">
+          <p style="color: #FFFFFF; font-size: 0.92rem;"><strong>Scaling Protocol:</strong> Validate CPA on showroom appointments and WhatsApp inquiries at ₹1,000/day, then scale budgets 20–25% weekly toward a target 4.0X ROAS.</p>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 10: PHASE 4B META ADS ================= -->
+      <section class="slide" data-slide="10">
+        <div class="slide-tag-row">
+          <span class="slide-badge slide-badge-gold">PHASE 4B • TARGET 3.2X ROAS</span>
+          <span class="slide-counter">Slide 10 of 14</span>
+        </div>
+        <h2 class="slide-title">META ADS PERFORMANCE FUNNEL</h2>
+        <p class="slide-subtitle">Deploying cinematic visual storytelling across Instagram and Facebook to generate qualified bridal leads and D2C sales.</p>
+        
+        <div class="grid-3" style="flex:1;">
+          <div class="card-block">
+            <h3>1. AWARENESS (TOFU)</h3>
+            <p><strong>Goal:</strong> Build massive visual desire.</p>
+            <p style="margin-top: 6px;">Cinematic 9:16 Reels highlighting bridal sparkle, craftsmanship ASMR, and bride makeovers targeting luxury and wedding planning interests.</p>
+          </div>
+          <div class="card-block">
+            <h3>2. CONSIDERATION (MOFU)</h3>
+            <p><strong>Goal:</strong> Eliminate doubt & build trust.</p>
+            <p style="margin-top: 6px;">Retargeting video viewers with hallmark verification walk-throughs, client reviews, transparent pricing, and catalog carousel ads.</p>
+          </div>
+          <div class="card-block">
+            <h3>3. CONVERSION (BOFU)</h3>
+            <p><strong>Goal:</strong> Book consultations & close orders.</p>
+            <p style="margin-top: 6px;">Click-to-WhatsApp direct sales ads, Lead Gen forms for VIP GK-II showroom appointments, and cart-abandonment offers.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 11: PHASE 5 GOING GLOBAL ================= -->
+      <section class="slide" data-slide="11">
+        <div class="slide-tag-row">
+          <span class="slide-badge">11 • PHASE 5 (MONTHS 4–12)</span>
+          <span class="slide-counter">Slide 11 of 14</span>
+        </div>
+        <h2 class="slide-title">GOING GLOBAL: NRI & EXPORT EXPANSION</h2>
+        <p class="slide-subtitle">Scaling Indian fine jewellery beyond domestic borders to affluent overseas diaspora communities in the US, UK, UAE, and Canada.</p>
+        
+        <div class="grid-4" style="flex:1;">
+          <div class="card-block">
+            <h3>LUXURY CHANNELS</h3>
+            <p>Presence on Etsy for bespoke silver & polki, curated Indian luxury portals (Pernia's Pop-Up Shop, Aza), and IndiaMART B2B diamond inquiries.</p>
+          </div>
+          <div class="card-block">
+            <h3>TARGET MARKETS</h3>
+            <p>Focusing on major NRI clusters: New Jersey, California, Texas (USA); London, Leicester (UK); Dubai (UAE); Toronto (Canada).</p>
+          </div>
+          <div class="card-block">
+            <h3>EXPORT READINESS</h3>
+            <p>IEC code, GJEPC membership, bonded high-value logistics (Brink's / DHL Valuables), and 100% door-to-door transit insurance.</p>
+          </div>
+          <div class="card-block">
+            <h3>NRI BRIDAL PR</h3>
+            <p>Digital partnerships with overseas Indian wedding planners, virtual video-call styling, and international diaspora bridal features.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 12: BRAND TOUCHPOINTS ================= -->
+      <section class="slide" data-slide="12">
+        <div class="slide-tag-row">
+          <span class="slide-badge">12 • BRAND IN ACTION</span>
+          <span class="slide-counter">Slide 12 of 14</span>
+        </div>
+        <h2 class="slide-title">BRAND TOUCHPOINTS IN HARMONY</h2>
+        <p class="slide-subtitle">Delivering an uninterrupted continuum of elegance, personal trust, and certified craftsmanship across every interaction.</p>
+        
+        <div class="grid-3" style="flex:1;">
+          <div class="card-block" style="text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 8px;">💻</div>
+            <h3>TOUCHPOINT 1: THE WEB FLAGSHIP</h3>
+            <p>Lightning-fast mobile e-commerce with real-time gold rates, 360° diamond rotation, ring sizer tool, and secure insured checkout.</p>
+          </div>
+          <div class="card-block" style="text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 8px;">📱</div>
+            <h3>TOUCHPOINT 2: SOCIAL CONCIERGE</h3>
+            <p>Aspirational Instagram grid aesthetics, 1-click WhatsApp VIP concierge, and live video-call showroom previews for out-of-town brides.</p>
+          </div>
+          <div class="card-block" style="text-align: center;">
+            <div style="font-size: 2.2rem; margin-bottom: 8px;">🏛️</div>
+            <h3>TOUCHPOINT 3: GK-II BOUTIQUE</h3>
+            <p>Private VIP consultation lounge, personalized bridal hospitality, physical certificate verification handover, and custom gift packaging.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 13: BEFORE AND AFTER ================= -->
+      <section class="slide" data-slide="13">
+        <div class="slide-tag-row">
+          <span class="slide-badge slide-badge-gold">PROJECTED 12-MONTH TARGETS</span>
+          <span class="slide-counter">Slide 13 of 14</span>
+        </div>
+        <h2 class="slide-title">BEFORE AND AFTER: 12-MONTH OUTLOOK</h2>
+        <p class="slide-subtitle">Realistic, benchmarked growth targets achieved through steady multi-phase digital execution.</p>
+        
+        <div style="margin-bottom: 24px;">
+          <h4 style="font-size: 0.85rem; color: var(--rose-light); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">BEFORE (THE OFFLINE BASELINE)</h4>
+          <div style="display: flex; gap: 20px; justify-content: space-between;">
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(255,255,255,0.02);">
+              <span style="font-size: 1.8rem; font-weight: 800; color: #888;">0</span>
+              <p style="font-size: 0.75rem; font-weight: 700;">FOLLOWERS</p>
+            </div>
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(255,255,255,0.02);">
+              <span style="font-size: 1.8rem; font-weight: 800; color: #888;">0</span>
+              <p style="font-size: 0.75rem; font-weight: 700;">VISITORS / MO</p>
+            </div>
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(255,255,255,0.02);">
+              <span style="font-size: 1.8rem; font-weight: 800; color: #888;">0</span>
+              <p style="font-size: 0.75rem; font-weight: 700;">LEADS / MO</p>
+            </div>
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(255,255,255,0.02);">
+              <span style="font-size: 1.8rem; font-weight: 800; color: #888;">0</span>
+              <p style="font-size: 0.75rem; font-weight: 700;">EXPORT MARKETS</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-size: 0.85rem; color: #4ADE80; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px;">AFTER (12-MONTH STRATEGIC GOALS)</h4>
+          <div style="display: flex; gap: 20px; justify-content: space-between;">
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(116,16,39,0.3); border-color: rgba(244,114,182,0.4);">
+              <span style="font-size: 2.2rem; font-weight: 900; color: #FFFFFF;">25K</span>
+              <p style="font-size: 0.75rem; font-weight: 700; color: var(--rose-light);">INSTAGRAM FANS</p>
+            </div>
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(116,16,39,0.3); border-color: rgba(244,114,182,0.4);">
+              <span style="font-size: 2.2rem; font-weight: 900; color: #FFFFFF;">35K</span>
+              <p style="font-size: 0.75rem; font-weight: 700; color: var(--rose-light);">MONTHLY VISITS</p>
+            </div>
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(116,16,39,0.3); border-color: rgba(244,114,182,0.4);">
+              <span style="font-size: 2.2rem; font-weight: 900; color: #FFFFFF;">180+</span>
+              <p style="font-size: 0.75rem; font-weight: 700; color: var(--rose-light);">MONTHLY LEADS</p>
+            </div>
+            <div class="card-block" style="flex:1; text-align: center; background: rgba(116,16,39,0.3); border-color: rgba(244,114,182,0.4);">
+              <span style="font-size: 2.2rem; font-weight: 900; color: #FFFFFF;">4</span>
+              <p style="font-size: 0.75rem; font-weight: 700; color: var(--rose-light);">EXPORT MARKETS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SLIDE 14: KPIS & RETENTION ================= -->
+      <section class="slide" data-slide="14">
+        <div class="slide-tag-row">
+          <span class="slide-badge">14 • PHASE 6 RESULTS & RETENTION</span>
+          <span class="slide-counter">Slide 14 of 14</span>
+        </div>
+        <h2 class="slide-title">KPIS AND RESULTS TRACKER</h2>
+        <p class="slide-subtitle">Retention Architecture: VIP WhatsApp Clienteling, Lifetime Cleaning & Polish Guarantee, 100% Exchange Buy-Back, 250+ Google Reviews.</p>
+        
+        <table class="pres-table">
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Metric Monitored</th>
+              <th>Baseline</th>
+              <th>12-Month Target</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Awareness</strong></td>
+              <td>Reach, Instagram followers, brand search impressions</td>
+              <td>0</td>
+              <td><span class="table-badge-win">25K followers | 1.2M impressions</span></td>
+            </tr>
+            <tr>
+              <td><strong>Engagement</strong></td>
+              <td>Saves, shares, video watch time, consultation clicks</td>
+              <td>0</td>
+              <td><span class="table-badge-win">4.8% engagement rate</span></td>
+            </tr>
+            <tr>
+              <td><strong>Website (SEO)</strong></td>
+              <td>Organic traffic, top South Delhi & national keyword ranks</td>
+              <td>0</td>
+              <td><span class="table-badge-win">35,000 visits / month</span></td>
+            </tr>
+            <tr>
+              <td><strong>Lead Gen</strong></td>
+              <td>WhatsApp inquiries, VIP showroom appointments</td>
+              <td>0</td>
+              <td><span class="table-badge-win">180+ qualified leads / month</span></td>
+            </tr>
+            <tr>
+              <td><strong>Paid Return</strong></td>
+              <td>E-commerce orders, ROAS, Google & Meta efficiency</td>
+              <td>0</td>
+              <td><span class="table-badge-win">3.6X blended ROAS</span></td>
+            </tr>
+            <tr>
+              <td><strong>Global Export</strong></td>
+              <td>NRI international orders (USA, UK, UAE, Canada)</td>
+              <td>0</td>
+              <td><span class="table-badge-win">25+ export shipments / month</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <footer class="pres-footer">
+    <div style="font-size: 0.85rem; font-weight: 700; color: var(--rose-light);" id="slideNumberDisplay">
+      Slide 01 of 14
+    </div>
+    
+    <div class="progress-track" title="Slide Progress">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="nav-btn-group">
+      <button class="btn-nav" id="btnPrev" title="Previous Slide (Left Arrow)" disabled>&#8592;</button>
+      <button class="btn-nav" id="btnNext" title="Next Slide (Right Arrow)">&#8594;</button>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentSlide = 0;
+
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const progressFill = document.getElementById('progressFill');
+    const slideNumberDisplay = document.getElementById('slideNumberDisplay');
+
+    function updateSlide(index) {
+      if (index < 0 || index >= totalSlides) return;
+
+      slides[currentSlide].classList.remove('active');
+      currentSlide = index;
+      slides[currentSlide].classList.add('active');
+
+      // Update controls
+      btnPrev.disabled = currentSlide === 0;
+      btnNext.disabled = currentSlide === totalSlides - 1;
+
+      const progressPct = ((currentSlide + 1) / totalSlides) * 100;
+      progressFill.style.width = `${progressPct}%`;
+
+      const numStr = (currentSlide + 1).toString().padStart(2, '0');
+      const totalStr = totalSlides.toString().padStart(2, '0');
+      slideNumberDisplay.textContent = `Slide ${numStr} of ${totalStr}`;
+    }
+
+    btnPrev.addEventListener('click', () => updateSlide(currentSlide - 1));
+    btnNext.addEventListener('click', () => updateSlide(currentSlide + 1));
+
+    // Keyboard Arrow navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        updateSlide(currentSlide - 1);
+      } else if (e.key === 'ArrowRight' || e.key === ' ') {
+        updateSlide(currentSlide + 1);
+      }
+    });
+  </script>
+</body>
+</html>

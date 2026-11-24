@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="pbBg" x1="0" y1="0" x2="600" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF9800"/>
+      <stop offset="100%" stop-color="#F57C00"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8BC34A"/>
+      <stop offset="100%" stop-color="#4CAF50"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="20" fill="url(#pbBg)"/>
+  
+  <!-- Subtle background pattern -->
+  <circle cx="100" cy="80" r="140" fill="white" fill-opacity="0.08"/>
+  <circle cx="520" cy="380" r="180" fill="white" fill-opacity="0.08"/>
+  
+  <!-- Paper Boat branding -->
+  <g transform="translate(50, 45)">
+    <text font-family="'Century Gothic', 'Montserrat', sans-serif" font-weight="900" font-size="34" fill="#FFFFFF" letter-spacing="-1">paper boat</text>
+    <text y="28" font-family="'Century Gothic', 'Montserrat', sans-serif" font-size="14" fill="#FFE0B2" letter-spacing="2">DRINKS & MEMORIES</text>
+  </g>
+
+  <!-- Happy Blend badge -->
+  <g transform="translate(420, 45)">
+    <rect width="130" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.25"/>
+    <text x="65" y="24" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">HAPPY BLEND</text>
+  </g>
+
+  <!-- Illustration of Drinks Pouch & Mango/Oranges -->
+  <g transform="translate(220, 110)">
+    <!-- Standing pouch -->
+    <path d="M40 70 L30 260 C30 280 60 290 80 290 L120 290 C140 290 170 280 170 260 L160 70 C160 55 145 50 100 50 C55 50 40 55 40 70 Z" fill="#FFF3E0"/>
+    <path d="M48 90 L40 250 C40 265 65 275 80 275 L120 275 C135 275 160 265 160 250 L152 90 Z" fill="#FFE082"/>
+    <circle cx="100" cy="170" r="42" fill="#FFB300"/>
+    <!-- Spout cap -->
+    <rect x="85" y="25" width="30" height="25" rx="5" fill="#4CAF50"/>
+    <rect x="82" y="20" width="36" height="10" rx="3" fill="#388E3C"/>
+    <!-- Fresh fruits around -->
+    <circle cx="0" cy="230" r="55" fill="#FF9800"/>
+    <path d="M-15 175 Q-5 155 25 170 Q10 200 -15 175 Z" fill="url(#leafGrad)"/>
+    <circle cx="190" cy="245" r="45" fill="#FFC107"/>
+    <path d="M200 200 Q215 180 240 195 Q225 220 200 200 Z" fill="url(#leafGrad)"/>
+  </g>
+
+  <!-- Bottom overlay info -->
+  <rect x="0" y="360" width="600" height="90" fill="#000000" fill-opacity="0.35"/>
+  <text x="50" y="400" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">Paper Boat - Packaging & Campaign</text>
+  <text x="50" y="424" font-family="system-ui, sans-serif" font-size="14" fill="#FFE0B2">Digital Marketing • FMCG Art Direction</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="zomatoBg" x1="0" y1="0" x2="600" y2="450" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E23744"/>
+      <stop offset="100%" stop-color="#991B1B"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="20" fill="url(#zomatoBg)"/>
+  
+  <g transform="translate(50, 45)">
+    <text font-family="'Arial Black', sans-serif" font-weight="900" font-style="italic" font-size="34" fill="#FFFFFF">zomato</text>
+    <text y="24" font-family="system-ui, sans-serif" font-size="12" fill="#FEE2E2" letter-spacing="2">LATE NIGHT CRAVINGS</text>
+  </g>
+
+  <!-- Tag pill -->
+  <g transform="translate(420, 45)">
+    <rect width="130" height="38" rx="19" fill="#FFFFFF" fill-opacity="0.25"/>
+    <text x="65" y="24" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">PERFORMANCE ADS</text>
+  </g>
+
+  <!-- Delicious food visuals -->
+  <g transform="translate(300, 215)">
+    <!-- Plate -->
+    <ellipse cx="0" cy="20" rx="150" ry="70" fill="#1C1917" opacity="0.3"/>
+    <ellipse cx="0" cy="10" rx="130" ry="60" fill="#F5F5F4"/>
+    
+    <!-- Hot Burger / Biryani / Pizza graphic -->
+    <!-- Burger bun -->
+    <path d="M-80 -10 C-80 -70 80 -70 80 -10 Z" fill="#F59E0B"/>
+    <!-- Sesame seeds -->
+    <circle cx="-30" cy="-40" r="3" fill="#FEF3C7"/>
+    <circle cx="20" cy="-45" r="3" fill="#FEF3C7"/>
+    <circle cx="0" cy="-30" r="3" fill="#FEF3C7"/>
+    <circle cx="-50" cy="-25" r="3" fill="#FEF3C7"/>
+    <circle cx="45" cy="-25" r="3" fill="#FEF3C7"/>
+    <!-- Patty and greens -->
+    <rect x="-82" y="-10" width="164" height="15" rx="5" fill="#22C55E"/>
+    <rect x="-86" y="5" width="172" height="18" rx="6" fill="#78350F"/>
+    <rect x="-82" y="23" width="164" height="12" rx="4" fill="#EF4444"/>
+    <path d="M-80 35 C-80 55 80 55 80 35 Z" fill="#D97706"/>
+    <!-- Steam waves -->
+    <path d="M-30 -80 Q-20 -100 -30 -120" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    <path d="M0 -85 Q10 -105 0 -125" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+    <path d="M30 -80 Q40 -100 30 -120" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Bottom info bar -->
+  <rect x="0" y="360" width="600" height="90" fill="#000000" fill-opacity="0.45"/>
+  <text x="50" y="400" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF">Zomato - High-Conversion Creatives</text>
+  <text x="50" y="424" font-family="system-ui, sans-serif" font-size="14" fill="#FCA5A5">Performance Marketing • Food Art Direction</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" fill="none">
+  <defs>
+    <linearGradient id="boatBg" x1="0" y1="0" x2="500" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="620" rx="16" fill="url(#boatBg)"/>
+  
+  <text x="250" y="55" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="14" fill="#38BDF8" letter-spacing="4" text-anchor="middle">SUPERIOR BASS • 60H PLAYTIME</text>
+  <text x="250" y="105" font-family="'Arial Black', sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" text-anchor="middle">AIRDOPES</text>
+  <text x="250" y="135" font-family="system-ui, sans-serif" font-weight="700" font-size="14" fill="#E2E8F0" letter-spacing="3" text-anchor="middle">BY boAt</text>
+
+  <!-- Futuristic wireless earbuds and pebble case -->
+  <g transform="translate(250, 330)">
+    <!-- Cyan glow circles -->
+    <circle cx="0" cy="20" r="130" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.3"/>
+    <circle cx="0" cy="20" r="90" stroke="#3B82F6" stroke-width="1" opacity="0.2"/>
+    
+    <!-- Charging Case -->
+    <rect x="-65" y="10" width="130" height="95" rx="30" fill="#020617" stroke="#334155" stroke-width="3"/>
+    <line x1="-55" y1="55" x2="55" y2="55" stroke="#1E293B" stroke-width="2"/>
+    <!-- boAt red sail logo dot -->
+    <circle cx="0" cy="75" r="5" fill="#EF4444"/>
+    
+    <!-- Floating Earbuds above case -->
+    <!-- Left Earbud -->
+    <g transform="translate(-45, -50) rotate(-15)">
+      <rect x="-10" y="-15" width="20" height="45" rx="10" fill="#020617" stroke="#06B6D4" stroke-width="2"/>
+      <circle cx="0" cy="-15" r="14" fill="#0F172A" stroke="#06B6D4" stroke-width="2"/>
+      <circle cx="0" cy="-15" r="5" fill="#06B6D4"/>
+    </g>
+    <!-- Right Earbud -->
+    <g transform="translate(45, -50) rotate(15)">
+      <rect x="-10" y="-15" width="20" height="45" rx="10" fill="#020617" stroke="#06B6D4" stroke-width="2"/>
+      <circle cx="0" cy="-15" r="14" fill="#0F172A" stroke="#06B6D4" stroke-width="2"/>
+      <circle cx="0" cy="-15" r="5" fill="#06B6D4"/>
+    </g>
+  </g>
+
+  <!-- Bottom CTA badge -->
+  <g transform="translate(250, 560)">
+    <rect x="-100" y="-20" width="200" height="40" rx="20" fill="url(#neonCyan)"/>
+    <text y="6" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#FFFFFF" text-anchor="middle">PLUG INTO NIRVANA</text>
+  </g>
+</svg>

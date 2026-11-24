@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 620" fill="none">
+  <defs>
+    <linearGradient id="gajakBg" x1="0" y1="0" x2="500" y2="620" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#991B1B"/>
+      <stop offset="100%" stop-color="#450A0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="500" height="620" rx="16" fill="url(#gajakBg)"/>
+  
+  <text x="250" y="55" font-family="'Century Gothic', sans-serif" font-weight="900" font-size="14" fill="#FDE047" letter-spacing="3" text-anchor="middle">MORENA FAMOUS CRUNCH</text>
+  <text x="250" y="105" font-family="'Times New Roman', serif" font-weight="900" font-size="44" fill="#FFFFFF" text-anchor="middle">JDC</text>
+  <text x="250" y="145" font-family="'Arial Black', sans-serif" font-weight="900" font-size="34" fill="#FACC15" text-anchor="middle">Gajak</text>
+
+  <!-- Gajak packaging pouch & crispy til rolls -->
+  <g transform="translate(250, 330)">
+    <!-- Red pack -->
+    <rect x="-80" y="-80" width="160" height="210" rx="14" fill="#DC2626" stroke="#FEF08A" stroke-width="3"/>
+    <rect x="-65" y="-65" width="130" height="60" rx="6" fill="#7F1D1D"/>
+    <text x="0" y="-30" font-family="'Arial Black', sans-serif" font-weight="900" font-size="20" fill="#FEF08A" text-anchor="middle">JDC GAJAK</text>
+    
+    <!-- Sesame gajak rolls sticking out / shown in front -->
+    <rect x="-60" y="15" width="40" height="90" rx="8" fill="#FDE047" stroke="#D97706" stroke-width="2"/>
+    <rect x="-10" y="10" width="40" height="95" rx="8" fill="#FEF08A" stroke="#D97706" stroke-width="2"/>
+    <rect x="35" y="25" width="40" height="80" rx="8" fill="#FDE047" stroke="#D97706" stroke-width="2"/>
+    
+    <!-- Sesame seed texture dots -->
+    <circle cx="-40" cy="35" r="2.5" fill="#78350F"/><circle cx="-45" cy="55" r="2" fill="#78350F"/><circle cx="-35" cy="75" r="2.5" fill="#78350F"/>
+    <circle cx="10" cy="30" r="2.5" fill="#78350F"/><circle cx="5" cy="60" r="2.5" fill="#78350F"/><circle cx="15" cy="80" r="2" fill="#78350F"/>
+  </g>
+
+  <g transform="translate(250, 560)">
+    <rect x="-100" y="-20" width="200" height="40" rx="20" fill="#FACC15"/>
+    <text y="6" font-family="system-ui, sans-serif" font-weight="800" font-size="14" fill="#7F1D1D" text-anchor="middle">CRUNCH NOW</text>
+  </g>
+</svg>

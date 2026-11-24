@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" fill="none">
+  <defs>
+    <!-- Frame gradients: Glossy futuristic rose-chrome -->
+    <linearGradient id="visorFrameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDA4AF"/>
+      <stop offset="25%" stop-color="#FB7185"/>
+      <stop offset="50%" stop-color="#E11D48"/>
+      <stop offset="75%" stop-color="#BE123C"/>
+      <stop offset="100%" stop-color="#881337"/>
+    </linearGradient>
+
+    <!-- Chrome metallic highlight -->
+    <linearGradient id="chromeHighlight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Dark Iridescent Glass Visor -->
+    <linearGradient id="visorGlassGrad" x1="0%" y1="0%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.92"/>
+      <stop offset="40%" stop-color="#1E1B4B" stop-opacity="0.88"/>
+      <stop offset="70%" stop-color="#311042" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#090D16" stop-opacity="0.94"/>
+    </linearGradient>
+
+    <!-- Holographic Sheen on Glass -->
+    <linearGradient id="glassSheen" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.4"/>
+      <stop offset="35%" stop-color="#06B6D4" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#A855F7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F43F5E" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- HUD Neon Glow filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="visorShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#E11D48" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#visorShadow)">
+    <!-- Top Brow Aerodynamic Shell -->
+    <path d="M70 70 C120 30 190 20 250 20 C310 20 380 30 430 70 C410 50 340 38 250 38 C160 38 90 50 70 70 Z" fill="url(#visorFrameGrad)"/>
+    
+    <!-- Top Brow Specular Edge -->
+    <path d="M90 62 C140 34 195 26 250 26 C305 26 360 34 410 62" stroke="url(#chromeHighlight)" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Main Panoramic Curved Glass Visor -->
+    <path d="M55 75 C105 45 175 35 250 35 C325 35 395 45 445 75 C455 125 435 185 395 210 C345 235 285 240 250 240 C215 240 155 235 105 210 C65 185 45 125 55 75 Z" fill="url(#visorGlassGrad)"/>
+    <path d="M55 75 C105 45 175 35 250 35 C325 35 395 45 445 75 C455 125 435 185 395 210 C345 235 285 240 250 240 C215 240 155 235 105 210 C65 185 45 125 55 75 Z" fill="url(#glassSheen)"/>
+
+    <!-- Diagonal Specular Slash across Visor -->
+    <path d="M110 65 L290 225 L325 225 L145 65 Z" fill="url(#chromeHighlight)" opacity="0.45"/>
+    <path d="M160 60 L340 220 L350 220 L170 60 Z" fill="#FFFFFF" opacity="0.3"/>
+
+    <!-- Left & Right Sleek Temple Caps -->
+    <path d="M45 75 C40 85 40 115 50 135 C58 130 65 105 60 80 Z" fill="url(#visorFrameGrad)"/>
+    <circle cx="52" cy="100" r="6" fill="#F43F5E"/>
+    <circle cx="52" cy="100" r="3" fill="#FFFFFF"/>
+
+    <path d="M455 75 C460 85 460 115 450 135 C442 130 435 105 440 80 Z" fill="url(#visorFrameGrad)"/>
+    <circle cx="448" cy="100" r="6" fill="#F43F5E"/>
+    <circle cx="448" cy="100" r="3" fill="#FFFFFF"/>
+
+    <!-- Futuristic Nose Bridge Notch & Cheek Line -->
+    <path d="M220 235 C235 215 265 215 280 235 C265 238 235 238 220 235 Z" fill="url(#visorFrameGrad)"/>
+    
+    <!-- Cyber HUD Digital Graphics Inside Visor -->
+    <g filter="url(#neonGlow)" opacity="0.9">
+      <!-- Reticle Crosshairs (Left Eye) -->
+      <circle cx="165" cy="135" r="28" stroke="#06B6D4" stroke-width="1.2" stroke-dasharray="6 4" fill="none"/>
+      <circle cx="165" cy="135" r="14" stroke="#EC4899" stroke-width="1.2" fill="none"/>
+      <line x1="165" y1="102" x2="165" y2="114" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="165" y1="156" x2="165" y2="168" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="132" y1="135" x2="144" y2="135" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="186" y1="135" x2="198" y2="135" stroke="#06B6D4" stroke-width="1.5"/>
+      <text x="142" y="180" font-family="monospace" font-size="9" fill="#06B6D4" font-weight="700" letter-spacing="1">ROI: 480%</text>
+
+      <!-- Target HUD (Right Eye) -->
+      <circle cx="335" cy="135" r="28" stroke="#06B6D4" stroke-width="1.2" stroke-dasharray="8 3" fill="none"/>
+      <circle cx="335" cy="135" r="8" fill="#F43F5E" opacity="0.6"/>
+      <line x1="335" y1="102" x2="335" y2="114" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="335" y1="156" x2="335" y2="168" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="302" y1="135" x2="314" y2="135" stroke="#06B6D4" stroke-width="1.5"/>
+      <line x1="356" y1="135" x2="368" y2="135" stroke="#06B6D4" stroke-width="1.5"/>
+      <text x="312" y="180" font-family="monospace" font-size="9" fill="#EC4899" font-weight="700" letter-spacing="1">CTR: 5.2%</text>
+
+      <!-- Top Center Horizon Line & Metrics -->
+      <line x1="210" y1="75" x2="290" y2="75" stroke="#EC4899" stroke-width="1"/>
+      <line x1="240" y1="70" x2="260" y2="70" stroke="#06B6D4" stroke-width="1.5"/>
+      <text x="216" y="90" font-family="monospace" font-size="8" fill="#38BDF8" font-weight="800" letter-spacing="1.5">AI GROWTH ENGINE</text>
+    </g>
+  </g>
+</svg>
